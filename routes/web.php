@@ -23,17 +23,15 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function() {
-    return view('home');
-})->name('home');
-
-
-Route::get('/', function() {
     return view('calendar');
 })->name('calendar');
-Route::get('/gallery', function() {
+Route::get('/home', function() {
+    return view('calendar');
+})->name('calendar');
+Route::get('/home/about', function() {
     return view('gallery');
 })->name('gallery');
-Route::get('/gallery/kanban', function() {
+Route::get('/home/about/help', function() {
     return view('kanban');
 })->name('kanban');
 
